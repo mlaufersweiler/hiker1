@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import routes from './routes';
+import Header from './components/Header/Header';
+import Menu from './components/Menu/Menu';
+import Popup from 'reactjs-popup';
+import BurgerIcon from './components/Menu/BurgerIcon';
+import 'typeface-roboto';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class App extends Component {
+  render() {
+    //for popup menu
+    const menuContentStyle = {
+      background: "rgba(255, 255, 255, 0)",
+      width: "275px",
+      border: "none"
+    };
+
+    return (
+      <div className='App'>
+        <Popup
+          modal
+          overlayStyle={{background: "rgba(255, 255, 255, 0.8)"}}
+          contentStyle={menuContentStyle}
+          closeOnDocumentClick={true}
+          trigger={open => <BurgerIcon open={open} />}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          {close => <Menu close={close} />}
+        </Popup>
+        <Header />
+        {routes}
+      </div>
+    )
+  }
 }
 
 export default App;
