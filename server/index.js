@@ -120,7 +120,7 @@ cron.schedule(`* * * * *`, async () => {
                     // setup email data with unicode symbols
                     let mailOptions = {
                         from: '"Hiker Alerts" <alertshiker@gmail.com>',
-                        to: alert_contact_email,
+                        to: `${alert_contact_email}`,
                         subject: `Alert for hiker ${first_name} ${last_name}`,
                         html: `<header><p>Hello ${alert_contact_name},<p>
                                 <p>Your ${user_contact_relationship}, ${first_name} ${last_name} went on a hiking/backpacking trip and listed you as their emergency contact. ${first_name} was supposed to return today, ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("MMM Do")} at ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("h:mma")}. Their detailed trip itinerary and personal information is below. If you can't get ahold of them yourself and are concerned for their safety, we recommend passing on this information to the ${state} state police to initiate a search and rescue effort. For more information on reporting a missing hiker, <a href="https://backpact.info/#/resources/fordesignatedcontacts">click here</a>.
@@ -233,7 +233,7 @@ cron.schedule(`* * * * *`, async () => {
                     // setup email data with unicode symbols
                     let mailOptions = {
                         from: '"Hiker Alerts" <alertshiker@gmail.com>',
-                        to: alert_contact_email,
+                        to: `${alert_contact_email}`,
                         subject: `URGENT: SOS alert for hiker ${first_name} ${last_name}`,
                         html: `<header><p>Hello ${alert_contact_name},<p>
                                 <p>Your ${user_contact_relationship}, ${first_name} ${last_name} went on a hiking/backpacking trip and listed you as their emergency contact. ${first_name} sent a SOS call for help through our app - something has gone wrong and they're in trouble. Their detailed trip itinerary and personal information is below. Please pass this information on to the ${state} state police ASAP to initiate a search and rescue effort.
