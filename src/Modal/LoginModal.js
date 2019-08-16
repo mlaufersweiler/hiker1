@@ -29,15 +29,6 @@ class LoginModal extends Component {
         })
     }
 
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.user.id && prevProps.user !== this.props.user) {
-    //         axios.get(`/api/alert-data/${this.props.user.id}`)
-    //             .then(res => {
-    //                 this.props.updateAlert(res.data)
-    //             })
-    //     } 
-    // }
-
     async login() {
         if (!this.state.username || !this.state.password) return alert(`Please enter a username and password.`)
         let res = await axios.post(`/auth/login`, {
