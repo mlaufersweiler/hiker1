@@ -56,14 +56,15 @@ a:visited {
  cursor: pointer;
  width: 12em;
 border: 1px solid rgb(89, 89, 89);
-/* box-shadow: -1px 1px 2px black;   */
+/* border-left: 1px solid rgb(89, 89, 89); */
+box-shadow: -1px 1px 1px black;  
 margin: 10px;
 box-sizing: border-box;
 text-transform: uppercase;
 color: black;
 text-align: center;
     background-color: rgba(255, 255, 255, 0);
-    border-radius: 4px;
+    border-radius: 10px;
     @media (max-width: 1000px) {
         font-size: 8px;
         padding: 10px 10px;

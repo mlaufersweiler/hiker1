@@ -13,7 +13,7 @@ class Home extends Component {
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginTop: '60px'}}>
             <ContentBox>
                 <MainHeading>On your next backpacking trip, give yourself some peace of mind.</MainHeading>
-                <Details><b>Hiker</b> is a trip-planning tool to help you stay safe in the backcountry. Run through a trip checklist, browse hiker resources, and set up an alert that'll notify your designated contact if you don't return by your expected end date.</Details>
+                <Details><b>Hiker</b> is a trip-planning tool to help you stay safe in the backcountry. Run through a trip checklist, browse hiker resources, and set up an alert notification system.</Details>
                 <div style={{display: 'flex', justifyContent: 'center'}}>
                     <Link to='/setalert'><Button>Set an Alert</Button></Link>
                     <Link to='/checklist'><Button>Trip Checklist</Button></Link>

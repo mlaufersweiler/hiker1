@@ -34,7 +34,7 @@ height: 18%;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     color: white;
     margin: 0.5em 1em;
-    padding: 0.3em 1em;
+    padding: 0.6em 2em;
     font-size: 14px;
     
     
@@ -53,9 +53,9 @@ height: 18%;
     color: white;
     position: absolute;
     top: 40px;
-    right: 135px;
+    right: 165px;
     @media (max-width: 600px) {
-    font-size: 11px;
+    font-size: 12px;
     margin: 4px 0px;
     color: white;
     position: absolute;
