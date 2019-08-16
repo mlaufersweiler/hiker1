@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import Clothing from './resources/Clothing';
-// import FirstAid from './resources/FirstAid';
-// import LNT from './resources/LNT';
 import Navigation from './resources/Navigation';
 import ForDesignatedContacts from './resources/ForDesignatedContacts'
 import {connect} from 'react-redux';
