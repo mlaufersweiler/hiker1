@@ -5,6 +5,7 @@ import {updateUser, updateAlert, showModal} from './../../ducks/reducer';
 import Modal from "./../../Modal/Modal";
 import LoginModal from "./../../Modal/LoginModal";
 import {Button, UserGreeting, Title, InvisibleHeader} from "./StyledHeader"
+import {Link} from 'react-router-dom'
 
 class Header extends Component {
 
@@ -23,7 +24,8 @@ class Header extends Component {
   render() {
     return (
       <InvisibleHeader>
-              <Title>Hiker</Title>
+        <Link to='/' ><Title>Hiker</Title></Link>
+              
               <div>
                 {this.props.user.username ?
                   <div>
