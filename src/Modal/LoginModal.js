@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {connect} from 'react-redux';
-import {updateUser, hideModal} from './../ducks/reducer';
+import { connect } from 'react-redux';
+import { updateUser, hideModal, updateAlert } from './../ducks/reducer';
 import TextField from '@material-ui/core/TextField';
-import {withRouter} from 'react-router-dom';
-import {LoginHeader, LoginSubhead, Button, ButtonContainer, ErrMsg} from './StyledModal';
+import { withRouter } from 'react-router-dom';
+import { LoginHeader, LoginSubhead, Button, ButtonContainer, ErrMsg } from './StyledModal';
+
 
 class LoginModal extends Component {
     constructor() {
@@ -27,6 +28,15 @@ class LoginModal extends Component {
         this.setState({
             password: e
         })
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.user.id && prevProps.user !== this.props.user) {
+            axios.get(`/api/alert-data/${this.props.user.id}`)
+                .then(res => {
+                    this.props.updateAlert(res.data)
+                })
+        } 
     }
 
     async login() {
@@ -95,10 +105,11 @@ class LoginModal extends Component {
 }
 
 function mapStateToProps(state) {
-    const { user } = state
+    const { user, alert } = state
     return {
         user,
+        alert
     }
 }
 
-export default withRouter(connect(mapStateToProps, { updateUser, hideModal })(LoginModal));
+export default withRouter(connect(mapStateToProps, { updateUser, hideModal, updateAlert })(LoginModal));

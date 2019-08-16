@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
-import {updateUser, showModal} from './../../ducks/reducer';
+import {updateUser, updateAlert, showModal} from './../../ducks/reducer';
 import Modal from "./../../Modal/Modal";
 import LoginModal from "./../../Modal/LoginModal";
 import {Button, UserGreeting, Title, InvisibleHeader} from "./StyledHeader"
-import { Link } from 'react-router-dom';
 
 class Header extends Component {
 
@@ -16,7 +15,7 @@ class Header extends Component {
   
   async logout () {
     await axios.get(`/auth/logout`)
-    // this.props.updateAlert({})
+    this.props.updateAlert({})
     let res = await axios.get(`/auth/user-data`)
     this.props.updateUser(res.data)
   }
@@ -24,9 +23,7 @@ class Header extends Component {
   render() {
     return (
       <InvisibleHeader>
-                <Link to='/'><Title>Hiker</Title></Link>
-              
-
+              <Title>Hiker</Title>
               <div>
                 {this.props.user.username ?
                   <div>
@@ -55,4 +52,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, {updateUser, showModal})(Header);
+export default connect(mapStateToProps, {updateUser, updateAlert, showModal})(Header);
