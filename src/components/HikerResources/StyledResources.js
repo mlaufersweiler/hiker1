@@ -81,6 +81,7 @@ box-sizing: border-box;
 @media (max-width: 600px) {
     margin-top: 15px;
     padding: 10px 20px;
+    text-align: left;
 }`
 
 export const Heading = styled.h3`
@@ -88,6 +89,7 @@ letter-spacing: 1px;
 text-transform: uppercase;
 @media (max-width: 600px) {
     font-size: 0.9em;
+    text-align: left;
 }
 `
 export const P = styled.p`
@@ -95,6 +97,7 @@ line-height: 1.5em;
 text-align: center;
 @media (max-width: 600px) {
     font-size: 0.8em;
+    text-align: left;
 }
 `
 

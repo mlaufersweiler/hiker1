@@ -1,18 +1,45 @@
 import styled from "styled-components"
 
+export const LinkButtons = styled.div`
+a {
+  color: white;
+  padding: 3em;
+  text-decoration: none;
+
+}
+a:hover{
+  font-size: 1.1em;
+
+}
+background: none;
+border: none;
+position: relative;
+width: 100%;
+display: flex;
+justify-content: center;
+min-width: 30px;
+min-height: 25px;
+font-size: 1.3em;
+color: white;
+`
+
 export const ContentBox = styled.div`
+position: absolute;
+top: 40vh;
+left: 10vw;
 width: 50%;
-max-width: 600px;
+max-width: 550px;
 margin: 20px;
 padding: 20px;
 background-color: rgba(255, 255, 255, 0.6);
-box-shadow: -3px 3px black;  
+/* box-shadow: -3px 3px black;   */
 @media (max-width: 600px) {
     width: 65%;
 }
 @media (max-width: 420px) {
     width: 100%;
     height: 50%;
+    /* align-items: left; */
 }
 `
 export const MainHeading = styled.h1`
@@ -55,13 +82,13 @@ a:visited {
  font-weight: bolder;
  cursor: pointer;
  width: 12em;
-border: 1px solid rgb(89, 89, 89);
+border: 2px solid rgb(89, 89, 89);
 /* border-left: 1px solid rgb(89, 89, 89); */
 box-shadow: -1px 1px 1px black;  
 margin: 10px;
 box-sizing: border-box;
 text-transform: uppercase;
-color: black;
+color: white;
 text-align: center;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 10px;

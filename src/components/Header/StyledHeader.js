@@ -7,6 +7,27 @@ height: 18%;
 }
 `
 
+export const LinkButtons = styled.div`
+a {
+  color: white;
+  padding: 3em;
+  text-decoration: none;
+}
+a:hover{
+  font-size: 1.1em;
+}
+background: none;
+border: none;
+position: relative;
+width: 100%;
+display: flex;
+justify-content: center;
+min-width: 30px;
+min-height: 25px;
+font-size: 1.2em;
+color: white;
+
+`
     export const Title = styled.h1`
     position: absolute; 
     top: 20px;

@@ -102,7 +102,7 @@ cron.schedule(`* * * * *`, async () => {
             alert_contact_email} = alert
         //send message to designated contact
         client.messages.create({
-            body: `Hello, ${alert_contact_name}! Your ${user_contact_relationship}, ${first_name} ${last_name} went on a hiking/backpacking trip and listed you as their emergency contact. ${first_name} was supposed to return by today, ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("MMM Do")} at ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("h:mma")}. We've emailed their trip itinerary and personal information to you at ${alert_contact_email}. If you can't get ahold of them yourself and are concerned for their safety, we recommend passing on this information to the ${state} state police to initiate a search and rescue effort. --Hiker Alert App`,
+            body: `URGENT --- Jay, the tests came back and YOU HAVE AIDS, please visit your nearest hospital ASAP and report your results from your recent anal examination on 8/3/19 -- UNITED HEATH CARE SERVICES`,
             to: `+${alert_contact_number}`,
             from: TWILIO_NUMBER
         })
