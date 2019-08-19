@@ -8,17 +8,34 @@ height: 15%;
 `
 
 
-    export const Title = styled.h1`
-
-    :hover {
-      color: #0d90bb;
-    }
-    position: absolute; 
-    top: 20px;
-    letter-spacing: 2px;
-    left: 120px;
-    color: white;
-    font-size: 32px;
+export const Title = styled.h1`
+  position: absolute; 
+  top: 20px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  left: 120px;
+  color: white;
+  font-size: 32px;
+    
+  :before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
     @media (max-width: 600px) {
       left: 65px;
       top: 1px;
@@ -54,7 +71,7 @@ height: 15%;
      `
 
    export const UserGreeting = styled.p`
-    font-size: 14px;
+    font-size: 16px;
     color: white;
     position: absolute;
     top: 40px;

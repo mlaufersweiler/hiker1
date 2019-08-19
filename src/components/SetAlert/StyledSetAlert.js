@@ -17,7 +17,7 @@ height: 70vh;
 width: 70vw;
 margin: auto;
 box-shadow: -2px 2px 1px;
-background-color: rgba(255, 255, 255, 0.6);
+background-color: rgba(255, 255, 255, 0.5);
 @media (max-width: 600px) {
     margin-top: 30px;
     width: 90%;
@@ -128,7 +128,7 @@ overflow: scroll;
 box-sizing: border-box;
 border: 1px solid grey;
 box-shadow: -2px 2px 2px black;
-background-color: rgba(255,255,255,0.7);
+background-color: rgba(255, 255, 255, 0.5);
 @media (max-width: 600px) {
     width: 90vw;
     height: 85vh;

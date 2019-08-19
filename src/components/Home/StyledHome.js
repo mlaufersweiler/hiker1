@@ -6,10 +6,8 @@ a {
   font-family: 'Montserrat', sans-serif;
   margin: 3em;
   text-decoration: none;
-  /* border-bottom: 1px solid black; */
   position: relative;
   color: white;
-  text-decoration: none;
 }
 a:before {
   content: "";
@@ -63,7 +61,7 @@ width: 50%;
 max-width: 550px;
 margin: 20px;
 padding: 20px;
-background-color: rgba(255, 255, 255, 0.6);
+background-color: rgba(255, 255, 255, 0.7);
 /* box-shadow: -3px 3px black;   */
 @media (max-width: 600px) {
     width: 65%;

@@ -23,7 +23,7 @@ class App extends Component {
             
             <Popup
               modal
-              overlayStyle={{ background: "rgba(116,140,135, 0.9)" }}
+              overlayStyle={{ background: "rgba(116,140,135, 0.85)" }}
               contentStyle={menuContentStyle}
               closeOnDocumentClick={true}
               trigger={open => <BurgerIcon open={open} />}

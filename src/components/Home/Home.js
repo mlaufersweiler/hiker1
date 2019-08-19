@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { ContentBox, MainHeading, Details, LinkButtons} from './StyledHome';
 import {Link} from 'react-router-dom'
+
+
 class Home extends Component {
  
     render () {
@@ -19,6 +21,7 @@ class Home extends Component {
                 <ContentBox>
                     <MainHeading>On your next backpacking trip, give yourself some peace of mind.</MainHeading>
                     <Details><b>Hiker</b> is a trip-planning tool to help you stay safe in the backcountry. Run through a trip checklist, browse hiker resources, and set up an alert notification system.</Details>
+                    <Link to='/map'>Go to map</Link>
                 </ContentBox>
             </div>
         )

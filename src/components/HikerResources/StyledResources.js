@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Menu = styled.div`
 width: 80vw;
 height: 15%;
-background-color: rgba(255, 255, 255, 0.6);
+background-color: rgba(255, 255, 255, 0.8);
 margin: auto;
 margin-top: 10px;
 display: flex;
@@ -74,7 +74,7 @@ height: 65vh;
 margin: auto;
 margin-top: 5px;
 overflow: scroll;
-background-color: rgba(255, 255, 255, 0.6);
+background-color: rgba(255, 255, 255, 0.8);
 padding: 10px 60px;
 box-sizing: border-box;
 @media (max-width: 1000px) {
