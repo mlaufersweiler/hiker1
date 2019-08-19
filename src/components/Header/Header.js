@@ -4,7 +4,7 @@ import axios from 'axios';
 import {updateUser, updateAlert, showModal} from './../../ducks/reducer';
 import Modal from "./../../Modal/Modal";
 import LoginModal from "./../../Modal/LoginModal";
-import {Button, UserGreeting, Title, InvisibleHeader, LinkButtons} from "./StyledHeader"
+import {Button, UserGreeting, Title, InvisibleHeader} from "./StyledHeader"
 import {Link} from 'react-router-dom'
 
 class Header extends Component {

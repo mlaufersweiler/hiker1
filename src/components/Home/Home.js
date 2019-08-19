@@ -12,10 +12,10 @@ class Home extends Component {
             
             <div>
             <LinkButtons>
-              <Link to='/setalert'>Set an Alert</Link>
-              <Link to='/checklist'>Trip Checklist</Link>
-              <Link to='/resources'>Resources</Link>
-          </LinkButtons>
+                <Link to='/setalert'>Set an Alert</Link>
+                <Link to='/checklist'>Trip Checklist</Link>
+                <Link to='/resources'>Resources</Link>
+            </LinkButtons>
                 <ContentBox>
                     <MainHeading>On your next backpacking trip, give yourself some peace of mind.</MainHeading>
                     <Details><b>Hiker</b> is a trip-planning tool to help you stay safe in the backcountry. Run through a trip checklist, browse hiker resources, and set up an alert notification system.</Details>

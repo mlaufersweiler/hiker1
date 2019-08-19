@@ -3,24 +3,56 @@ import styled from "styled-components"
 export const LinkButtons = styled.div`
 a {
   color: white;
-  padding: 3em;
+  font-family: 'Montserrat', sans-serif;
+  margin: 3em;
   text-decoration: none;
-
+  /* border-bottom: 1px solid black; */
+  position: relative;
+  color: white;
+  text-decoration: none;
 }
-a:hover{
-  font-size: 1.1em;
-
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 background: none;
 border: none;
-position: relative;
 width: 100%;
 display: flex;
 justify-content: center;
 min-width: 30px;
 min-height: 25px;
-font-size: 1.3em;
+font-size: 1.5em;
 color: white;
+
+@media (max-width: 700px){
+    margin-top: 2em;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    a:hover{
+    font-weight: normal;
+    font-weight: bolder;
+    border-bottom: none; 
+    }
+}
 `
 
 export const ContentBox = styled.div`

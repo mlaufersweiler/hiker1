@@ -36,11 +36,16 @@ background-color: rgba(255, 255, 255, 0);
 border: none;
 border-bottom: 3px solid rgba(255, 255, 255, 0);
 a {
-    text-decoration: none;
+    position: relative;
+  color: #000;
+  text-decoration: none;
 }
+
+
 &:hover {
     border-bottom: 3px solid black;
 }
+
 @media (max-width: 1000px) {
     padding: 12px;
     font-size: 12px;
