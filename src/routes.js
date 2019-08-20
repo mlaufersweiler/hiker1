@@ -4,7 +4,7 @@ import Home from './components/Home/Home';
 import ChecklistDashboard from './components/Checklist/ChecklistDashboard';
 import SetAlert from './components/SetAlert/SetAlert';
 import HikerResources from './components/HikerResources/HikerResources';
-import GoogleMap from './components/Map/GoogleMap';
+import MapContainer from './components/Map/MapContainer';
 
 export default (
     <Switch>
@@ -12,6 +12,6 @@ export default (
         <Route path='/setalert' component={SetAlert}/>
         <Route path='/checklist' component={ChecklistDashboard}/>
         <Route path='/resources' component={HikerResources}/>
-        <Route path='/googlemap' component={GoogleMap} />
+        <Route path='/mapcontainer' component={MapContainer} />
     </Switch>
 )

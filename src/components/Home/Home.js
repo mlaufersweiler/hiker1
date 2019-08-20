@@ -21,7 +21,7 @@ class Home extends Component {
                 <ContentBox>
                     <MainHeading>On your next backpacking trip, give yourself some peace of mind.</MainHeading>
                     <Details><b>Hiker</b> is a trip-planning tool to help you stay safe in the backcountry. Run through a trip checklist, browse hiker resources, and set up an alert notification system.</Details>
-                    <Link to='/googlemap'>Find a Trail</Link>
+                    <Link to='/mapcontainer'>Find a Trail</Link>
                 </ContentBox>
             </div>
         )
