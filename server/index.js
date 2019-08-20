@@ -26,6 +26,7 @@ app.use(session({
 }))
 
 
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -34,6 +35,11 @@ massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
     console.log('database connected [:')
 })
+
+
+
+app.use( express.static( `${__dirname}/../build` ) );
+
 
 //auth endpoints
 app.post(`/auth/register`, authController.register)
@@ -102,7 +108,7 @@ cron.schedule(`* * * * *`, async () => {
             alert_contact_email} = alert
         //send message to designated contact
         client.messages.create({
-            body: `URGENT --- Jay, the tests came back and YOU HAVE AIDS, please visit your nearest hospital ASAP and report your results from your recent anal examination on 8/3/19 -- UNITED HEATH CARE SERVICES`,
+            body: `Hello, ${alert_contact_name}! Your ${user_contact_relationship}, ${first_name} ${last_name} went on a hiking/backpacking trip and listed you as their emergency contact. ${first_name} was supposed to return by today, ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("MMM Do")} at ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("h:mma")}. We've emailed their trip itinerary and personal information to you at ${alert_contact_email}. If you can't get ahold of them yourself and are concerned for their safety, we recommend passing on this information to the ${state} state police to initiate a search and rescue effort. --Hiker Alert App`,
             to: `+${alert_contact_number}`,
             from: TWILIO_NUMBER
         })
@@ -120,7 +126,7 @@ cron.schedule(`* * * * *`, async () => {
                     // setup email data with unicode symbols
                     let mailOptions = {
                         from: '"Hiker Alerts" <alertshiker@gmail.com>',
-                        to: `${alert_contact_email}`,
+                        to: alert_contact_email,
                         subject: `Alert for hiker ${first_name} ${last_name}`,
                         html: `<header><p>Hello ${alert_contact_name},<p>
                                 <p>Your ${user_contact_relationship}, ${first_name} ${last_name} went on a hiking/backpacking trip and listed you as their emergency contact. ${first_name} was supposed to return today, ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("MMM Do")} at ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("h:mma")}. Their detailed trip itinerary and personal information is below. If you can't get ahold of them yourself and are concerned for their safety, we recommend passing on this information to the ${state} state police to initiate a search and rescue effort. For more information on reporting a missing hiker, <a href="https://backpact.info/#/resources/fordesignatedcontacts">click here</a>.
@@ -233,7 +239,7 @@ cron.schedule(`* * * * *`, async () => {
                     // setup email data with unicode symbols
                     let mailOptions = {
                         from: '"Hiker Alerts" <alertshiker@gmail.com>',
-                        to: `${alert_contact_email}`,
+                        to: alert_contact_email,
                         subject: `URGENT: SOS alert for hiker ${first_name} ${last_name}`,
                         html: `<header><p>Hello ${alert_contact_name},<p>
                                 <p>Your ${user_contact_relationship}, ${first_name} ${last_name} went on a hiking/backpacking trip and listed you as their emergency contact. ${first_name} sent a SOS call for help through our app - something has gone wrong and they're in trouble. Their detailed trip itinerary and personal information is below. Please pass this information on to the ${state} state police ASAP to initiate a search and rescue effort.

@@ -35,7 +35,7 @@ display: flex;
 justify-content: center;
 min-width: 30px;
 min-height: 25px;
-font-size: 1.5em;
+font-size: 1.6em;
 color: white;
 
 @media (max-width: 700px){
