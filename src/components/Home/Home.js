@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import { ContentBox, MainHeading, Details, LinkButtons, GoogleBtn} from './StyledHome';
 import {Link} from 'react-router-dom'
-import { width } from '@material-ui/system';
+
 
 
 class Home extends Component {

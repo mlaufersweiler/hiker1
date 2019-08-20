@@ -307,3 +307,6 @@ cron.schedule(`* * * * *`, async () => {
 app.listen(SERVER_PORT, () => {
     console.log(`Port ${SERVER_PORT} is open for business.`)
 })
+// http.createServer(app).listen(SERVER_PORT, () => {
+//     console.log(`Express server listening on port: 4000`);
+//   });
