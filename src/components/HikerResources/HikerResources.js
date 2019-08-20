@@ -6,7 +6,6 @@ import Navigation from './resources/Navigation';
 import ForDesignatedContacts from './resources/ForDesignatedContacts'
 import {connect} from 'react-redux';
 import {Menu, Button} from './StyledResources';
-import BrowseTrails from './resources/BrowseTrails'
 
 
 class HikerResources extends Component {
@@ -16,9 +15,7 @@ class HikerResources extends Component {
         return (
             <div>
                 <Menu>
-                <Link to='/resources/fordesignatedcontacts'><Button>Designated Contacts</Button></Link>
-
-                <Link to='/resources/browsetrails'><Button>Browse Trails</Button></Link>
+                <Link to='/resources/fordesignatedcontacts'><Button>Designated <br/>Contacts</Button></Link>
                 
                 <Link to='/resources/navigation'><Button>Navigation</Button></Link>
 
@@ -30,7 +27,6 @@ class HikerResources extends Component {
                 
                 <Switch>
                     <Route path='/resources/fordesignatedcontacts' component={ForDesignatedContacts} />
-                    <Route path='/resources/browsetrails' component={BrowseTrails} />
                     <Route path='/resources/navigation' component={Navigation} />
                     <Route path='/resources/clothing' component={Clothing} />                   
                 </Switch>
