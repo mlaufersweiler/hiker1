@@ -28,6 +28,7 @@ app.use(session({
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(express.json());
 
 //connect server to build folder 
@@ -62,7 +63,7 @@ cron.schedule(`* * * * *`, async () => {
     expiredAlerts.forEach(alert => {
         let { first_name, user_phone_number, alert_contact_name, alert_id } = alert
         client.messages.create({
-            body: `Hey, ${first_name}! Have you returned from your trip? Text 'BACK' if you've returned safely, 'LATE' if you're just running late, or 'SOS' if you're in trouble and need help. If we don't hear from you within an hour, we'll send an alert to your designated contact, ${alert_contact_name}. --Hiker Alert App`,
+            body: `Hey, ${first_name}! Have you returned from your trip? If you have please respond with to this text with "BACK".  If we do not hear from you after 30 minutes, we'll send all your trip information over to your designated contact, ${alert_contact_name}. --Hiker Alert App`,
             to: `+${user_phone_number}`,
             from: TWILIO_NUMBER
         })
@@ -126,10 +127,10 @@ cron.schedule(`* * * * *`, async () => {
                     // setup email data with unicode symbols
                     let mailOptions = {
                         from: '"Hiker Alerts" <alertshiker@gmail.com>',
-                        to: alert_contact_email,
+                        to: `${alert_contact_email}`,
                         subject: `Alert for hiker ${first_name} ${last_name}`,
                         html: `<header><p>Hello ${alert_contact_name},<p>
-                                <p>Your ${user_contact_relationship}, ${first_name} ${last_name} went on a hiking/backpacking trip and listed you as their emergency contact. ${first_name} was supposed to return today, ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("MMM Do")} at ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("h:mma")}. Their detailed trip itinerary and personal information is below. If you can't get ahold of them yourself and are concerned for their safety, we recommend passing on this information to the ${state} state police to initiate a search and rescue effort. For more information on reporting a missing hiker, <a href="https://backpact.info/#/resources/fordesignatedcontacts">click here</a>.
+                                <p>Your ${user_contact_relationship}, ${first_name} ${last_name} went on a hiking/backpacking trip and listed you as their emergency contact. ${first_name} was supposed to return today, ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("MMM Do")} at ${moment(trip_end, "YYYY-MM-DDTHH:mm:ss.SS").format("h:mma")}. Their detailed trip itinerary and personal information is below. If you can't get ahold of them yourself and are concerned for their safety, we recommend passing on this information to the ${state} state police to initiate a search and rescue effort.
                                 <br></br>
                                 </header>
                                 <h4>${first_name}'s Trip Itinerary:</h4>
