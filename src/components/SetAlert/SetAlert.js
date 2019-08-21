@@ -298,7 +298,7 @@ class SetAlert extends Component {
                                 onSubmit={() => this.handleSubmit()}
                                 onError={errors => console.log(errors)}>
                                 <MainHeading>Setting an alert</MainHeading>
-                                <TopInfo><b>How this works: </b>Tell us some info about yourself and your trip, along with when you're leaving, when you plan to return, and one emergency contact's information. If you don't return on time, Backpact will send you a text message to check on you. If you don't respond to that within an hour, we'll notify your emergency contact and send them the trip details you record here.</TopInfo>
+                                <TopInfo><b>How this works: </b>Tell us some info about yourself and your trip, along with when you're leaving, when you plan to return, and one emergency contact's information. If you don't return on time, Hiker will send you a text message to check on you. If you don't respond to that within an hour, we'll notify your emergency contact and send them the trip details you record here.</TopInfo>
                                 <FormHeading>TRAIL INFO</FormHeading>
                                 <TextValidator
                                     name="trailName"

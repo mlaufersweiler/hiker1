@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
-import { ContentBox, MainHeading, Details, LinkButtons, GoogleBtn} from './StyledHome';
+import { ContentBox, MainHeading, Details, LinkButtons} from './StyledHome';
 import {Link} from 'react-router-dom'
 
 
@@ -22,7 +22,7 @@ class Home extends Component {
                 <ContentBox>
                     <MainHeading>On your next backpacking trip, give yourself some peace of mind.</MainHeading>
                     <Details><b>Hiker</b> is a trip-planning tool to help you stay safe in the backcountry. Run through a trip checklist, browse hiker resources, and set up an alert notification system.</Details>
-                    <Link to='/mapcontainer'><GoogleBtn>Find a Trail</GoogleBtn></Link>
+    
                 </ContentBox>
             </div>
         )

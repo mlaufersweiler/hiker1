@@ -62,7 +62,7 @@ cron.schedule(`* * * * *`, async () => {
     expiredAlerts.forEach(alert => {
         let { first_name, user_phone_number, alert_contact_name, alert_id } = alert
         client.messages.create({
-            body: `Hey, ${first_name}! Have you returned from your trip? Text 'BACK' if you've returned safely, 'LATE' if you're just running late, or 'SOS' if you're in trouble and need help. If we don't hear from you within an hour, we'll send an alert to your designated contact, ${alert_contact_name}. --Hiker Trail Alert App`,
+            body: `Hey, ${first_name}! Have you returned from your trip? Text 'BACK' if you've returned safely, 'LATE' if you're just running late, or 'SOS' if you're in trouble and need help. If we don't hear from you within an hour, we'll send an alert to your designated contact, ${alert_contact_name}. --Hiker Alert App`,
             to: `+${user_phone_number}`,
             from: TWILIO_NUMBER
         })
