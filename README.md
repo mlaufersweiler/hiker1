@@ -53,7 +53,7 @@ Website: http://hiker.world/#/
 - Resource section with information about being a designated contact, along with navigation and clothing sections with helpful videos:
 ![Screen Shot 2019-09-16 at 9 22 16 AM](https://user-images.githubusercontent.com/29295716/64964907-0562ba00-d86a-11e9-9577-7593ef24a89e.png)
 
--Trip checklist and gear list:
+- Trip checklist and gear list:
 ![Screen Shot 2019-09-16 at 9 21 59 AM](https://user-images.githubusercontent.com/29295716/64964927-0ac00480-d86a-11e9-8539-7c7a390d972f.png)
 
 
