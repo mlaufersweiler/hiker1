@@ -1,7 +1,7 @@
 
 <h1>Hiker</h1>
 
-React | Redux | Node | Express | Massive | PostgreSQL | Axios | Bcrypt | Node-Cron | Twilio | TwiML | Nodemailer | Moment.js
+React | Redux | Node | Express | Massive | PostgreSQL | Axios | Bcrypt | Node-Cron | Twilio | TwiML | Nodemailer | Moment.js | Styled Components
 <br />
 
 Hiker is a responsive trip planning tool & alert system to keep hikers safe in the backcountry. It allows hikers to browse resources, review a trip checklist, set up an alert that will check on them via text to see if they've returned on their expected end date. If the hiker doesn't respond within the hour, Hiker will text and email the hiker's designated contact with the full trip itinerary, along with directions on how to report a missing hiker.
